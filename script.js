@@ -12,7 +12,7 @@ let weather = {
     const { icon, description } = data.weather[0];
     const { temp, humidity, temp_min, temp_max } = data.main;
     const { speed } = data.wind;
-    const time = new Date();
+    const time = new Date().toDateString();
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(".icon").src =
       "https://openweathermap.org/img/wn/" + icon + "@2x.png";
